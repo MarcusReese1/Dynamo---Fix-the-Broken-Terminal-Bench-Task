@@ -1,0 +1,68 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.14, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 3 items
+
+../tests/test_outputs.py FFF                                             [100%]
+
+=================================== FAILURES ===================================
+__________________ test_report_is_json_object_with_exact_keys __________________
+
+    def test_report_is_json_object_with_exact_keys():
+        """Success criterion 1: the report is a JSON object with exactly the required keys."""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+>       assert REPORT_PATH.is_file(), "/app/report.json was not produced"
+E       AssertionError: /app/report.json was not produced
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = PosixPath('/app/report.json').is_file
+
+/tests/test_outputs.py:9: AssertionError
+______________________ test_request_and_unique_ip_counts _______________________
+
+    def test_request_and_unique_ip_counts():
+        """Success criterion 2: request and distinct-client counts are correct."""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+>       assert REPORT_PATH.is_file(), "/app/report.json was not produced"
+E       AssertionError: /app/report.json was not produced
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = PosixPath('/app/report.json').is_file
+
+/tests/test_outputs.py:9: AssertionError
+________________________________ test_top_path _________________________________
+
+    def test_top_path():
+        """Success criterion 3: top_path is the most frequently requested path."""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+>       assert REPORT_PATH.is_file(), "/app/report.json was not produced"
+E       AssertionError: /app/report.json was not produced
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = PosixPath('/app/report.json').is_file
+
+/tests/test_outputs.py:9: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_outputs.py::test_report_is_json_object_with_exact_keys
+FAILED ../tests/test_outputs.py::test_request_and_unique_ip_counts - Assertio...
+FAILED ../tests/test_outputs.py::test_top_path - AssertionError: /app/report....
+============================== 3 failed in 0.02s ===============================

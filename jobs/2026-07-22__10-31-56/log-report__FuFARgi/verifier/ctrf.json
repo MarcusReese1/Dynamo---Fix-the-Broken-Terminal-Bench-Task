@@ -1,0 +1,56 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 0,
+            "failed": 3,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1784730719.836893,
+            "stop": 1784730719.854901
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_report_is_json_object_with_exact_keys",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0004962080000012747,
+                "start": 1784730719.846606,
+                "stop": 1784730719.8516018,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_report_is_json_object_with_exact_keys():\n        \"\"\"Success criterion 1: the report is a JSON object with exactly the required keys.\"\"\"\n>       report = load_report()\n                 ^^^^^^^^^^^^^\n\n/tests/test_outputs.py:19: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def load_report():\n>       assert REPORT_PATH.is_file(), \"/app/report.json was not produced\"\nE       AssertionError: /app/report.json was not produced\nE       assert False\nE        +  where False = is_file()\nE        +    where is_file = PosixPath('/app/report.json').is_file\n\n/tests/test_outputs.py:9: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_request_and_unique_ip_counts",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00039491599999763594,
+                "start": 1784730719.8516982,
+                "stop": 1784730719.8532047,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_request_and_unique_ip_counts():\n        \"\"\"Success criterion 2: request and distinct-client counts are correct.\"\"\"\n>       report = load_report()\n                 ^^^^^^^^^^^^^\n\n/tests/test_outputs.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def load_report():\n>       assert REPORT_PATH.is_file(), \"/app/report.json was not produced\"\nE       AssertionError: /app/report.json was not produced\nE       assert False\nE        +  where False = is_file()\nE        +    where is_file = PosixPath('/app/report.json').is_file\n\n/tests/test_outputs.py:9: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_top_path",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0003674579999994876,
+                "start": 1784730719.853291,
+                "stop": 1784730719.854762,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_top_path():\n        \"\"\"Success criterion 3: top_path is the most frequently requested path.\"\"\"\n>       report = load_report()\n                 ^^^^^^^^^^^^^\n\n/tests/test_outputs.py:39: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def load_report():\n>       assert REPORT_PATH.is_file(), \"/app/report.json was not produced\"\nE       AssertionError: /app/report.json was not produced\nE       assert False\nE        +  where False = is_file()\nE        +    where is_file = PosixPath('/app/report.json').is_file\n\n/tests/test_outputs.py:9: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}
